@@ -10,7 +10,7 @@ public class Contact {
     private List<PhoneNumber> phoneNumbers;
     private List<Email> emails;
     private LocalDateTime createdDate;
-
+    private boolean deleted = false;
     public Contact(String name) {
 
         this.id = UUID.randomUUID().toString();
@@ -51,5 +51,13 @@ public class Contact {
     }
     public void setName(String name) {
         this.name = name;
+    }
+
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
     }
 }
