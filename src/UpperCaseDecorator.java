@@ -1,4 +1,14 @@
-package PACKAGE_NAME;
+// Display contact name in uppercase
+public class UpperCaseDecorator extends ContactDecorator {
 
-public class UpperCaseDecorator {
+    public UpperCaseDecorator(Contact contact) {
+        super(contact);
+    }
+
+    @Override
+    public String toString() {
+
+        return contact.toString().replace(contact.getName(),
+                contact.getName().toUpperCase());
+    }
 }
