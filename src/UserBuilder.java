@@ -30,7 +30,8 @@ public class UserBuilder {
 
     public User build() {
 
-        if (userType.equalsIgnoreCase("Premium")) {
+        if (userType.equalsIgnoreCase("Premium"))
+        {
             return new PremiumUser(fullName, email, password);
         }
 
