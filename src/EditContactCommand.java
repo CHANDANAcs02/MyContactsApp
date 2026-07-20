@@ -1,4 +1,8 @@
-package PACKAGE_NAME;
+// Command interface
 
-public class EditContactCommand {
+public interface EditContactCommand {
+
+    void execute();
+
+    void undo();
 }
