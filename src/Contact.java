@@ -65,4 +65,7 @@ public class Contact implements ContactComponent{
     public void showDetails() {
         System.out.println(this);
     }
+    public java.time.LocalDateTime getCreatedDate() {
+        return createdDate;
+    }
 }
