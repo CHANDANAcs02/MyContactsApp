@@ -49,4 +49,7 @@ public class Contact {
                 "\nEmails     : " + emails +
                 "\nCreated On : " + createdDate;
     }
+    public void setName(String name) {
+        this.name = name;
+    }
 }
