@@ -1,4 +1,6 @@
-package PACKAGE_NAME;
+public class Organization extends Contact {
 
-public class Organization {
+    public Organization(String name) {
+        super(name);
+    }
 }
