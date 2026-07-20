@@ -1,4 +1,6 @@
-package PACKAGE_NAME;
+public class Person extends Contact {
 
-public class Person {
+    public Person(String name) {
+        super(name);
+    }
 }
