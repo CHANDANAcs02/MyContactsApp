@@ -2,6 +2,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Contact implements ContactComponent{
 
@@ -11,6 +13,9 @@ public class Contact implements ContactComponent{
     private List<Email> emails;
     private LocalDateTime createdDate;
     private boolean deleted = false;
+    private Set<Tag> tags = new HashSet<>();
+
+
     public Contact(String name) {
 
         this.id = UUID.randomUUID().toString();
@@ -47,6 +52,7 @@ public class Contact implements ContactComponent{
                 "\nName       : " + name +
                 "\nPhones     : " + phoneNumbers +
                 "\nEmails     : " + emails +
+                "\nTags       : " + tags +
                 "\nCreated On : " + createdDate;
     }
     public void setName(String name) {
@@ -67,5 +73,13 @@ public class Contact implements ContactComponent{
     }
     public java.time.LocalDateTime getCreatedDate() {
         return createdDate;
+    }
+
+    public void addTag(Tag tag) {
+        tags.add(tag);
+    }
+
+    public Set<Tag> getTags() {
+        return tags;
     }
 }
