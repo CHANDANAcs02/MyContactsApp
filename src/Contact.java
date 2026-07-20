@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class Contact {
+public class Contact implements ContactComponent{
 
     private String id;
     private String name;
@@ -59,5 +59,10 @@ public class Contact {
 
     public void setDeleted(boolean deleted) {
         this.deleted = deleted;
+    }
+
+    @Override
+    public void showDetails() {
+        System.out.println(this);
     }
 }
